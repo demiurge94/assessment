@@ -1,5 +1,5 @@
 # Running and Installing:
-Compile using `tsc` on the console and run with `yarn start`. 
+Compile using `tsc` on the console or just run with `yarn start`. 
 ---
 # General thought process: 
 I used a basic `TreeNode` class to create the tree, along with recursive functions to traverse the tree when adding, removing and 
@@ -10,11 +10,8 @@ a `deleteEmployee` function in the `TreeNode` class. It was my initial approach 
 templates provided. 
 
 The two functions that we can merge are `promoteEmployee` and `demoteEmployee`. I actually merged them by creating a 
-function in the class `TreeNode` that swapped employee. I defaulted to this approach because it seemed more trivial since
-everytime you run either function, you are demoting someone. You also promote someone but the demotion caught my eye since you 
-will always run across the person you are demoting first when traversing the tree, as they are higher up. 
-
+function in the class `TreeNode` that swapped employee. I defaulted to this approach because I noticed that every time you run either function you are both promoting and demoting someone. Therefore, it seemed easier to just make a function that would swap employees, searching first for the *demotee* since they would always come first in the heirarchy. 
 If I had more time, I would implement a DFS algorithm to find the lowest employee. I would also try to improve the time complexity of my functions to O(nlog(n)). 
 
 # Time Complexities 
-The time complexities of my functions, except `fireEmployee` is O(n). For `fireEmployee` I'm not entirely sure if the time complexity is the same given that I filter through the subordinate array twice. 
+The time complexities of my functions, except `fireEmployee` is O(n), since we traverse the tree once. For `fireEmployee` I'm not entirely sure if the time complexity is the same given that I filter through the subordinate array twice. 
