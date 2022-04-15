@@ -23,7 +23,6 @@ function main() {
     demoteEmployee(tree, "Xavier", "Maria"); 
     getBoss(tree, "Bill");
     getSubordinates(tree, "Sal"); 
-    
     console.log('main')
 }
 

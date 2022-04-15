@@ -101,6 +101,10 @@ export function fireEmployee(tree: TreeNode, name: string) {
         if (tree.value.name == name){
             let index: number = Math.floor(Math.random() * tree.subordinates.length);
             let temp: TreeNode = tree.subordinates[index]; 
+            if( tree.subordinates.length == 0 ){
+                tree = null; 
+                return;
+            }
             for(let i = 0; i < tree.subordinates.length; i++){
                 let filtered: TreeNode[] = tree.subordinates.filter(f => f.value.name == temp.value.name );
                 tree.subordinates.forEach(f => f.value.boss = temp.value.name); 

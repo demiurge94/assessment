@@ -1,12 +1,12 @@
-# Running and Installing
+# Running and Installing:
 Compile using `tsc` on the console and run with `yarn start`. 
 ---
 # General thought process: 
-I used a basic TreeNode class to create the tree, along with recursive functions to traverse the tree when adding, removing and 
+I used a basic `TreeNode` class to create the tree, along with recursive functions to traverse the tree when adding, removing and 
 searching for employees and their subordinates. The TreeNode class consists of an employee object and an array of TreeNodes to 
 store the subordinates. 
-Initially, I basically wrote an addSubordinate function which doubled as an insert function when running `hireEmployee` and
-a deleteEmployee function in the TreeNode class. It was my initial approach but I decided on rewriting it to use the function
+Initially, I basically wrote an `addSubordinate` function which doubled as an insert function when running `hireEmployee` and
+a `deleteEmployee` function in the `TreeNode` class. It was my initial approach but I decided on rewriting it to use the function
 templates provided. 
 
 The two functions that we can merge are `promoteEmployee` and `demoteEmployee`. I actually merged them by creating a 
