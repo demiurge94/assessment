@@ -22,7 +22,7 @@ function main() {
     promoteEmployee(tree, 'Jared'); 
     demoteEmployee(tree, "Xavier", "Maria"); 
     getBoss(tree, "Bill");
-    getSubordinates(tree, "Sal"); 
+    getSubordinates(tree, "Maria"); 
     console.log('main')
 }
 

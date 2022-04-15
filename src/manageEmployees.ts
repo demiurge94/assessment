@@ -147,7 +147,7 @@ export function promoteEmployee(tree: TreeNode, employee: string) {
  */
 export function demoteEmployee(tree: TreeNode, employee:string, subordinateName: string) {
     tree.swapEmployee(subordinateName, employee);
-    console.log("[demoteEmployee]: Demoted employee: (demoted " + employee + " and replaced with " + subordinateName + ")"); 
+    console.log("[demoteEmployee]: Demoted employee (demoted " + employee + " and replaced with " + subordinateName + ")"); 
 }
 
 
