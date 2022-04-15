@@ -104,6 +104,7 @@ export function fireEmployee(tree: TreeNode, name: string) {
             for(let i = 0; i < tree.subordinates.length; i++){
                 let filtered: TreeNode[] = tree.subordinates.filter(f => f.value.name == temp.value.name );
                 tree.subordinates.forEach(f => f.value.boss = temp.value.name); 
+                tree.subordinates = tree.subordinates.filter(f => f.value.name != temp.value.name)
                 tree.value.name = temp.value.name; 
                 console.log("[fireEmployee]: Fired " + name + " and replaced with " + tree.value.name); 
                 return; 

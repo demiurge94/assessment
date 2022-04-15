@@ -1,5 +1,5 @@
 # Running and Installing
-    ` @todo `
+Compile using `tsc` on the console and run with `yarn start`. 
 ---
 # General thought process: 
 I used a basic TreeNode class to create the tree, along with recursive functions to traverse the tree when adding, removing and 
@@ -17,4 +17,4 @@ will always run across the person you are demoting first when traversing the tre
 If I had more time, I would implement a DFS algorithm to find the lowest employee. I would also try to improve the time complexity of my functions to O(nlog(n)). 
 
 # Time Complexities 
-The time complexities of my functions are O(n), since we always traverse the tree once. 
+The time complexities of my functions, except `fireEmployee` is O(n). For `fireEmployee` I'm not entirely sure if the time complexity is the same given that I filter through the subordinate array twice. 
